@@ -120,9 +120,11 @@ export default function Home() {
                   </span>
                 </button>
               </Link>
-              <button className="glass hover:bg-slate-800/50 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105">
-                Corporate Login
-              </button>
+              <Link href="/contact">
+                <button className="glass hover:bg-slate-800/50 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105">
+                  Contact Us
+                </button>
+              </Link>
             </div>
 
             {/* Stats */}
@@ -389,15 +391,19 @@ export default function Home() {
             mission-critical technology needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="group bg-white text-slate-900 hover:bg-slate-100 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105">
-              <span className="flex items-center justify-center gap-2">
-                Schedule a Demo
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-              </span>
-            </button>
-            <button className="glass hover:bg-slate-800/50 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105">
-              View Documentation
-            </button>
+            <Link href="/contact">
+              <button className="group bg-white text-slate-900 hover:bg-slate-100 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105">
+                <span className="flex items-center justify-center gap-2">
+                  Schedule a Demo
+                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                </span>
+              </button>
+            </Link>
+            <Link href="/blog">
+              <button className="glass hover:bg-slate-800/50 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105">
+                View Documentation
+              </button>
+            </Link>
           </div>
         </div>
       </section>

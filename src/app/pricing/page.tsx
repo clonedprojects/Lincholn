@@ -136,7 +136,7 @@ export default function PricingPage() {
                  <span className="text-xs text-slate-500">Your information is secure and NDA protected.</span>
                </div>
 
-               <button type="submit" className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold py-4 rounded-xl shadow-lg shadow-purple-900/20 transition-all flex items-center justify-center gap-2">
+               <button type="submit" className="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-bold py-4 rounded-xl shadow-lg shadow-blue-900/30 hover:shadow-blue-900/50 transition-all flex items-center justify-center gap-2">
                  Schedule Consultation <ArrowRight size={18} />
                </button>
              </form>
