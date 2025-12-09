@@ -53,6 +53,10 @@ export default function Navbar() {
                                 </div>
                             </div>
                         ))}
+                        <Link href="/about" className="text-sm text-slate-300 hover:text-white transition">About</Link>
+                        <Link href="/blog" className="text-sm text-slate-300 hover:text-white transition">Blog</Link>
+                        <Link href="/pricing" className="text-sm text-slate-300 hover:text-white transition">Pricing</Link>
+                        <Link href="/contact" className="text-sm text-slate-300 hover:text-white transition">Contact</Link>
                     </div>
 
                     {/* CTA */}
@@ -86,6 +90,13 @@ export default function Navbar() {
                                 </Link>
                             </div>
                         ))}
+                        <div className="border-t border-slate-700/50 pt-4 mt-4 space-y-4">
+                            <Link href="/about" className="block text-slate-200 hover:text-blue-400" onClick={() => setIsOpen(false)}>About Us</Link>
+                            <Link href="/blog" className="block text-slate-200 hover:text-blue-400" onClick={() => setIsOpen(false)}>Blog</Link>
+                            <Link href="/pricing" className="block text-slate-200 hover:text-blue-400" onClick={() => setIsOpen(false)}>Pricing</Link>
+                            <Link href="/contact" className="block text-slate-200 hover:text-blue-400" onClick={() => setIsOpen(false)}>Contact</Link>
+                            <Link href="/faq" className="block text-slate-200 hover:text-blue-400" onClick={() => setIsOpen(false)}>FAQ</Link>
+                        </div>
                         <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition mt-4">
                             Subscribe
                         </button>

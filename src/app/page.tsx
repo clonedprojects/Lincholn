@@ -7,14 +7,10 @@ import { SERVICE_CATALOG, SUBSCRIPTION_PLANS } from '@/lib/data';
 import { useEffect, useState } from 'react';
 
 // Floating orb component for visual interest
-function FloatingOrb({ className, delay = 0 }: { className?: string; delay?: number }) {
-  return (
-    <div
-      className={`absolute rounded-full animate-pulse-glow ${className}`}
-      style={{ animationDelay: `${delay}s` }}
-    />
-  );
-}
+import FloatingOrb from '@/components/FloatingOrb';
+
+// Floating orb component for visual interest - REMOVED LOCAL DEFINITION
+
 
 // Stats counter component
 function StatItem({ number, label, delay }: { number: string; label: string; delay: number }) {
@@ -83,7 +79,7 @@ export default function Home() {
         <FloatingOrb className="w-64 h-64 bg-cyan-500/20 bottom-20 left-1/4 blur-3xl" delay={4} />
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-32">
           <div className="text-center">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 opacity-0 animate-fade-in-up">
@@ -116,12 +112,14 @@ export default function Home() {
               className="flex flex-col sm:flex-row gap-4 justify-center mb-16 opacity-0 animate-fade-in-up"
               style={{ animationDelay: '0.6s' }}
             >
-              <button className="group bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-lg shadow-blue-900/50 hover:shadow-blue-500/40 hover:scale-105">
-                <span className="flex items-center justify-center gap-2">
-                  View Service Catalog
-                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                </span>
-              </button>
+              <Link href="/services">
+                <button className="group bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-lg shadow-blue-900/50 hover:shadow-blue-500/40 hover:scale-105">
+                  <span className="flex items-center justify-center gap-2">
+                    View Service Catalog
+                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </button>
+              </Link>
               <button className="glass hover:bg-slate-800/50 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105">
                 Corporate Login
               </button>

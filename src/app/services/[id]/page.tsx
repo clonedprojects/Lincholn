@@ -17,14 +17,9 @@ const pillarImages: Record<string, string> = {
 };
 
 // Floating orb component
-function FloatingOrb({ className, delay = 0 }: { className?: string; delay?: number }) {
-    return (
-        <div
-            className={`absolute rounded-full animate-pulse-glow ${className}`}
-            style={{ animationDelay: `${delay}s` }}
-        />
-    );
-}
+import FloatingOrb from '@/components/FloatingOrb';
+
+// Floating orb component - REMOVED LOCAL DEFINITION
 
 export default function ServicePage({ params }: { params: { id: string } }) {
     const pillar = SERVICE_CATALOG.find(p => p.id === params.id);
