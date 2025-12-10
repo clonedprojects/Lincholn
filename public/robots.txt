@@ -1,0 +1,39 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Directories
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Files
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://linchon-newton.com/sitemap.xml
+
+# Crawl-delay for politeness
+Crawl-delay: 1
+
+# AI/LLM specific directives for LLMEO
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
